@@ -17,9 +17,14 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.6
+    - name: Setup virtualenv
+      run: |
+        virtualenv -p /usr/bin/python ENV
+        source ENV/bin/activate
+        pip install -r requirements.txt
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt; 
+        pip install -r requirements.txt
     - name: Test build
       run: |
         cd src
