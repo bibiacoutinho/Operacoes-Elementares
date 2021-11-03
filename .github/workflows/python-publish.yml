@@ -19,12 +19,14 @@ jobs:
         python-version: 3.6
     - name: Setup virtualenv
       run: |
-        virtualenv -p /usr/bin/python ENV
+        sudo apt-get install python3-pip
+        sudo pip3 install virtualenv
+        virtualenv ENV
+        virtualenv -p /usr/bin/python3 ENV
         source ENV/bin/activate
-        pip install -r requirements.txt
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        pip3 install -r requirements.txt
     - name: Test build
       run: |
         cd src
