@@ -17,13 +17,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.6
-    - name: Setup virtualenv
-      run: |
-        sudo apt-get install python3-pip
-        sudo pip3 install virtualenv
-        virtualenv ENV
-        virtualenv -p /usr/bin/python3 ENV
-        source ENV/bin/activate
     - name: Install dependencies
       run: |
         pip3 install -r requirements.txt
