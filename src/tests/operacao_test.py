@@ -1,5 +1,5 @@
 import unittest
-from operacao import diferenca
+from ..operacao import diferenca
 from unittest import TestCase
 
 
