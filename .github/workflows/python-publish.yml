@@ -29,4 +29,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Execução de Teste de unidades
       run: |
-        python -m unittest src.operacao_test
+        python3 -m unittest src.operacao_test
